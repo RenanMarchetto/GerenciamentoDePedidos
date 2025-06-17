@@ -1,0 +1,51 @@
+@model GerenciamentoDePedidos.Models.Order
+@{
+    ViewData["Title"] = "Order Details";
+}
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+<div class="container mt-4">
+    <h2>Order #@Model.Id</h2>
+    <dl class="row">
+        <dt class="col-sm-2">Customer</dt>
+        <dd class="col-sm-10">@Model.Customer?.Name</dd>
+        <dt class="col-sm-2">Date</dt>
+        <dd class="col-sm-10">@Model.OrderDate.ToShortDateString()</dd>
+        <dt class="col-sm-2">Status</dt>
+        <dd class="col-sm-10">
+            <form asp-action="UpdateStatus" method="post" class="d-inline">
+                <input type="hidden" name="id" value="@Model.Id" />
+                <select name="status" class="form-select d-inline w-auto">
+                    <option value="Novo" selected="@(Model.Status == "Novo" ? "selected" : null)">Novo</option>
+                    <option value="Processando" selected="@(Model.Status == "Processando" ? "selected" : null)">Processando</option>
+                    <option value="Finalizado" selected="@(Model.Status == "Finalizado" ? "selected" : null)">Finalizado</option>
+                </select>
+                <button type="submit" class="btn btn-primary btn-sm">Update</button>
+            </form>
+        </dd>
+        <dt class="col-sm-2">Total</dt>
+        <dd class="col-sm-10">@Model.TotalAmount.ToString("C")</dd>
+    </dl>
+    <h4>Items</h4>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Product</th>
+                <th>Unit Price</th>
+                <th>Quantity</th>
+                <th>Subtotal</th>
+            </tr>
+        </thead>
+        <tbody>
+        @foreach (var item in Model.Items)
+        {
+            <tr>
+                <td>@item.Product?.Name</td>
+                <td>@item.UnitPrice.ToString("C")</td>
+                <td>@item.Quantity</td>
+                <td>@item.Total.ToString("C")</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+    <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+</div>

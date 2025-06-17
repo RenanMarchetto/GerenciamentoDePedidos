@@ -1,0 +1,8 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=dda0d31e_002D4467_002D4617_002Da6ff_002D6bdc974e92ba/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Index_ReturnsViewResult_WithOrders" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::D7224E30-65A5-4D65-8C32-5C9D2F1E80FF::net8.0::Tests.OrderControllerTests.Index_ReturnsViewResult_WithOrders&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::D7224E30-65A5-4D65-8C32-5C9D2F1E80FF::net8.0::Tests.CustomerControllerTests.Index_ReturnsViewResult_WithCustomers&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::D7224E30-65A5-4D65-8C32-5C9D2F1E80FF::net8.0::Tests.ProductControllerTests.Index_ReturnsViewResult_WithProducts&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

@@ -1,0 +1,11 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/GerenciamentoDePedidos/.vs/GerenciamentoDePedidos
+/GerenciamentoDePedidos/GerenciamentoDePedidos/bin/Debug/net8.0
+/GerenciamentoDePedidos/GerenciamentoDePedidos/obj
+/GerenciamentoDePedidos/.vs/ProjectEvaluation
+/GerenciamentoDePedidos/Tests/bin/Debug/net8.0
+/GerenciamentoDePedidos/Tests/obj
